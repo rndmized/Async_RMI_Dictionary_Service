@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>RMIDictionaryService</display-name>
+  
+  <!-- A servlet class must be bound to a name -->
+  <servlet>
+    <servlet-name>service-request-handler</servlet-name>
+    <servlet-class>ie.gmit.ServiceHandler.ServiceHandler</servlet-class>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  
+  <!-- A servlet name must be bound to a URL mapping, i.e. localhost:8080/doProcess executes the servlet ie.gmit.sw.ServiceHandler in WEB-INF/classes -->
+  <servlet-mapping>
+    <servlet-name>service-request-handler</servlet-name>
+    <url-pattern>/doProcess</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>service-poll-handler</servlet-name>
+    <servlet-class>ie.gmit.ServiceHandler.ServicePollHandler</servlet-class>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>service-poll-handler</servlet-name>
+    <url-pattern>/poll</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
