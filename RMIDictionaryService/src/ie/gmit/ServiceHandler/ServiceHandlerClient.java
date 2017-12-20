@@ -26,7 +26,7 @@ public class ServiceHandlerClient implements Runnable {
 		try {
 
 			Thread.sleep(2000);	
-			result = service.getDefinition(job.getDef().getWord());
+			result = service.lookUp(job.getDef().getWord());
 			out.put(job.getTaskNumber(), result);
 			
 		} catch (Exception e) {

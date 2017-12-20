@@ -9,6 +9,6 @@ import java.rmi.RemoteException;
  */
 public interface DictionaryService extends Remote {
 	
-	public Definition getDefinition(String word) throws RemoteException;
+	public Definition lookUp(String word) throws RemoteException;
 
 }
